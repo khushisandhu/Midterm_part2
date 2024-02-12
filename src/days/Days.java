@@ -24,12 +24,33 @@ public class Days {
      */
     public static void main(String[] args) {
          
-    Scanner in =new Scanner(System.in);
-    System.out.println("Enter the day number (one,two,three,four,five) in string");
-    String code = in.next();
-    Weekdays t= new Weekdays();
-    t.nameOfDay(code); 
-    }// TODO code application logic here
-    
-    
+    Scanner in = new Scanner(System.in);
+System.out.println("Enter the day number (1-7)");
+int code = in.nextInt();
+Weekdays t = new Weekdays();
+switch(code) {
+    case 1:
+        t.nameOfDay(Day.ONE);
+        break;
+    case 2:
+        t.nameOfDay(Day.TWO);
+        break;
+    case 3:
+        t.nameOfDay(Day.THREE);
+        break;
+    case 4:
+        t.nameOfDay(Day.FOUR);
+        break;
+    case 5:
+        t.nameOfDay(Day.FIVE);
+        break;
+    case 6:
+        t.nameOfDay(Day.SIX);
+        break;
+    case 7:
+        t.nameOfDay(Day.SEVEN);
+        break;
+    default:
+        System.out.println("Invalid input");
+        break;
 }
